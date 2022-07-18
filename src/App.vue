@@ -1,28 +1,20 @@
 <template>
+ <!-- app.vue是根组件 -->
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <catagtory />
+    <new-list />
   </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Catagtory from './components/catag-tory'
+import NewList from './components/new-list'
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    Catagtory, NewList
+  },
+  mounted(){
+    console.log(this.$store.state.catagtory.catagtory);
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
